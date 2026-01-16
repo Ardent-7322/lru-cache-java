@@ -1,24 +1,26 @@
 # LRU Cache (Java)
 
-A simple in-memory LRU (Least Recently Used) cache
-implementation built to demonstrate core data-structure
-and object-oriented design principles in Java.
+A small Java implementation of an in-memory LRU (Least Recently Used) cache.
+This project was built to practice and demonstrate core data-structure
+implementation and basic object-oriented design in Java.
 
-## Features
+## Overview
 
-- O(1) get and put operations
-- HashMap for constant-time lookup
-- Doubly Linked List for eviction order
-- Dummy head and tail nodes to simplify edge cases
+The cache supports constant-time `get` and `put` operations by combining:
+- a HashMap for fast key lookup
+- a doubly linked list to track usage order
 
-## Design Focus
+Dummy head and tail nodes are used to simplify insertion and removal logic.
 
-- Clean object-oriented structure
-- Explicit eviction strategy
-- Readable and maintainable code
+## Key Characteristics
 
-## Non-goals
+- O(1) average-time `get` and `put`
+- Explicit eviction of least recently used entries
+- Simple, readable implementation focused on correctness
 
-- Thread safety
-- Persistence
-- Distributed caching
+## Scope
+
+This project is intentionally scoped and does not attempt to handle:
+- concurrency or thread safety
+- persistence or storage
+- distributed or production-grade caching concerns
